@@ -75,7 +75,7 @@ class LoginViewModel (private val loginRepository: ILoginRepository) : ViewModel
         val containsDigit = password.any { it in digits }
 
         if(!containsSpecialChar) {
-            return "Password should contain one special character from: ${specialCharacters.toString()}"
+            return "Password should contain one special character from: ${specialCharacters.toList()}"
         }
         if(!containsUppercase) {
             return "Password should contain one uppercase"
